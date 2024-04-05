@@ -11,6 +11,10 @@
     "ng shamsi date picker",
     "zorro jalali date picker"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Abbasr7/ngz-jalali-datepicker"
+  },
   "peerDependencies": {
     "@angular/common": "^17.3.0",
     "@angular/core": "^17.3.0",
