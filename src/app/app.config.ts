@@ -4,12 +4,12 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 
 
 import { routes } from './app.routes';
-// import { JalaliMomentDateAdapter, NZ_DATE_CONFIG, NzDateAdapter, NzI18nService, fa_IR } from 'ngz-jalali-datepicker';
+import { JalaliMomentDateAdapter, NZ_DATE_CONFIG, NzDateAdapter, NzI18nService, fa_IR } from 'ngz-jalali-datepicker';
 
 import fa from '@angular/common/locales/fa';
 import { registerLocaleData } from '@angular/common';
-import { NZ_DATE_CONFIG, NzI18nService, fa_IR } from '../../projects/ngz-jalali-datepicker/src/i18n';
-import { JalaliMomentDateAdapter, NzDateAdapter } from '../../projects/ngz-jalali-datepicker/src/public-api';
+// import { NZ_DATE_CONFIG, NzI18nService, fa_IR } from '../../projects/ngz-jalali-datepicker/src/i18n';
+// import { JalaliMomentDateAdapter, NzDateAdapter } from '../../projects/ngz-jalali-datepicker/src/public-api';
 
 
 export const appConfig: ApplicationConfig = {

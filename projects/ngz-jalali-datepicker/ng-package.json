@@ -3,10 +3,11 @@
   "dest": "../../dist/ngz-jalali-datepicker",
   "assets": [
     "src/style.less",
+    "src/assets",
     {
       "glob": "**/*",
       "input": "/src/assets/",
-      "output": "/"
+      "output": "/assets"
     }
   ],
   "lib": {
