@@ -13,7 +13,11 @@ import { NzMonthPickerComponent } from './month-picker.component';
 import { NzRangePickerComponent } from './range-picker.component';
 import { NzWeekPickerComponent } from './week-picker.component';
 import { NzYearPickerComponent } from './year-picker.component';
+import { fa_IR } from '../i18n';
+import fa from '@angular/common/locales/fa';
+import { registerLocaleData } from '@angular/common';
 
+registerLocaleData(fa, fa_IR);
 @NgModule({
   imports: [
     NzDatePickerComponent,
