@@ -1,6 +1,6 @@
 {
   "name": "ngz-jalali-datepicker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "A Date picker UI component that support jalali-shmasi date based on Ant Design and Angular",
   "keywords": [
