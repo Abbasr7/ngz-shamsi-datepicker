@@ -27,7 +27,7 @@
     "jalali-moment": "^3.3.11"
   },
   "exports": {
-    "./src/style.less": {
+    ".": {
       "less": "./src/style.less"
     }
   },

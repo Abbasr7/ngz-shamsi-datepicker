@@ -1,6 +1,10 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/ngz-jalali-datepicker",
+  "assets": [
+    "src/style.less",
+    { "input": "src/style", "glob": "**/*.less", "output": "styles" }
+  ],
   "lib": {
     "entryFile": "src/public-api.ts"
   },

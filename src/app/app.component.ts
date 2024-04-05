@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { NzDatePickerModule } from 'ngz-jajali-datepicker';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NzDatePickerModule } from 'ngz-jalali-datepicker';
 
 @Component({
   selector: 'app-root',
