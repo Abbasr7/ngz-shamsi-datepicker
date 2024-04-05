@@ -272,7 +272,8 @@ export type NzPlacement = 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight';
     NzOverlayModule,
     NzNoAnimationDirective
   ],
-  standalone: true
+  standalone: true,
+  styleUrls: ['./date-picker.component.less']
 })
 export class NzDatePickerComponent implements OnInit, OnChanges, AfterViewInit, ControlValueAccessor {
   readonly _nzModuleName: NzConfigKey = NZ_CONFIG_MODULE_NAME;
