@@ -1,0 +1,35 @@
+{
+  "name": "ngz-jalali-datepicker",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "A Date picker UI component that support jalali-shmasi date based on Ant Design and Angular",
+  "keywords": [
+    "ant-date-picker",
+    "jalali-datepicker",
+    "angular shamsi date picker",
+    "ng jalali date picker",
+    "ng shamsi date picker",
+    "zorro jalali date picker"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^17.3.0",
+    "@angular/core": "^17.3.0",
+    "@angular/animations": "^17.3.0",
+    "@angular/forms": "^17.3.0",
+    "@angular/platform-browser": "^17.3.0",
+    "@angular/router": "^17.3.0",
+    "@angular/cdk": "^17.3.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0",
+    "@ant-design/icons-angular": "^17.0.0",
+    "date-fns": "^3.0.6",
+    "jalali-moment": "^3.3.11"
+  },
+  "exports": {
+    "./src/style.less": {
+      "less": "./src/style.less"
+    }
+  },
+  "sideEffects": false
+}
