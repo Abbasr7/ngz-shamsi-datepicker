@@ -15,7 +15,7 @@ import { NzDatePickerModule, NzI18nService, en_US, fa_IR } from 'ngz-shamsi-date
 export class AppComponent {
   title = 'ngz-datepicker';
   ranges = { "امروز": [new Date(), new Date()], 'این ماه': [new Date(), new Date()] };
-  isPersian = true;
+  isPersian = false;
 
   constructor(private i18n: NzI18nService) {
     this.i18n.setLocale(this.isPersian? fa_IR :en_US);

@@ -8,13 +8,25 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <main class="main">
-  <button *ngIf="!isPersian" (click)="changeLanguage()">{{ 'تاریخ شمسی' }}</button>
-<!-- <button *ngIf="isPersian" (click)="changeLanguage()">{{ isPersian? 'نمایش تاریخ میلادی': 'تاریخ شمسی' }}</button> -->
-<button *ngIf="isPersian" (click)="changeLanguage()">{{ 'نمایش تاریخ میلادی' }}</button>
-  <div class="content" [dir]="isPersian? 'rtl': 'lrt'">
+  <button *ngIf="!isPersian" (click)="changeLanguage()">
+    {{ "تاریخ شمسی" }}
+  </button>
+  <!-- <button *ngIf="isPersian" (click)="changeLanguage()">{{ isPersian? 'نمایش تاریخ میلادی': 'تاریخ شمسی' }}</button> -->
+  <button *ngIf="isPersian" (click)="changeLanguage()">
+    {{ "نمایش تاریخ میلادی" }}
+  </button>
+  <div class="content" [dir]="isPersian ? 'rtl' : 'lrt'">
+    <nz-date-picker
+      (ngModelChange)="onChange($event)"
+    ></nz-date-picker>
+    <br />
+    <br />
 
-    <nz-range-picker [nzRanges]="ranges" ngModel (ngModelChange)="onChange($event)"></nz-range-picker>
-
+    <nz-range-picker
+      [nzRanges]="ranges"
+      ngModel
+      (ngModelChange)="onChange($event)"
+    ></nz-range-picker>
   </div>
 </main>
 
@@ -25,6 +37,5 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
 
 <router-outlet></router-outlet>
