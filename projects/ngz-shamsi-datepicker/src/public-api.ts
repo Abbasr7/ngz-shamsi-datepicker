@@ -1,5 +1,5 @@
 /*
- * Public API Surface of ngz-jalali-datepicker
+ * Public API Surface of ngz-shamsi-datepicker
  */
 
 export * from './date-picker/public-api';

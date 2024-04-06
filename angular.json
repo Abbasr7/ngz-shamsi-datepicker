@@ -97,23 +97,23 @@
         }
       }
     },
-    "ngz-jalali-datepicker": {
+    "ngz-shamsi-datepicker": {
       "projectType": "library",
-      "root": "projects/ngz-jalali-datepicker",
-      "sourceRoot": "projects/ngz-jalali-datepicker/src",
+      "root": "projects/ngz-shamsi-datepicker",
+      "sourceRoot": "projects/ngz-shamsi-datepicker/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/ngz-jalali-datepicker/ng-package.json"
+            "project": "projects/ngz-shamsi-datepicker/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ngz-jalali-datepicker/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ngz-shamsi-datepicker/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/ngz-jalali-datepicker/tsconfig.lib.json"
+              "tsConfig": "projects/ngz-shamsi-datepicker/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -121,7 +121,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/ngz-jalali-datepicker/tsconfig.spec.json",
+            "tsConfig": "projects/ngz-shamsi-datepicker/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"

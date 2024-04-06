@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NzDatePickerModule, NzI18nService, en_US, fa_IR } from 'ngz-jalali-datepicker';
-// import { NzDatePickerModule, NzI18nService } from '../../projects/ngz-jalali-datepicker/src/public-api';
+import { NzDatePickerModule, NzI18nService, en_US, fa_IR } from 'ngz-shamsi-datepicker';
+// import { NzDatePickerModule, NzI18nService } from '../../projects/ngz-shamsi-datepicker/src/public-api';
 
 @Component({
   selector: 'app-root',

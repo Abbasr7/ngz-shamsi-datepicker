@@ -1,5 +1,5 @@
 {
-  "name": "ngz-jalali-datepicker",
+  "name": "ngz-shamsi-datepicker",
   "version": "1.0.1",
   "license": "MIT",
   "description": "A Date picker UI component that support jalali-shmasi date based on Ant Design and Angular",
@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Abbasr7/ngz-jalali-datepicker"
+    "url": "https://github.com/Abbasr7/ngz-shamsi-datepicker"
   },
   "peerDependencies": {
     "@angular/common": "^17.3.0",
