@@ -19,7 +19,6 @@ export class AppComponent {
 
   constructor(private i18n: NzI18nService) {
     this.i18n.setLocale(this.isPersian? fa_IR :en_US);
-    console.log(this.i18n.getLocale());
   }
 
   changeLanguage(): void {
