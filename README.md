@@ -18,13 +18,14 @@ If you need to present another calendar like Jalali or Hijri, you can provide a 
 
 ```
 Example
-import { NzDateAdapter } from 'ngz-shamsi-datepicker';
+import { NzDatePickerModule, NzDateAdapter } from 'ngz-shamsi-datepicker';
 
 export class CustomDateAdapter extends NzDateAdapter<any> {
   // implementation of abstract methods
 }
 
 @NgModule({
+  imports: [NzDatePickerModule],
   providers: [{ provide: NzDateAdapter, useClass: CustomDateAdapter }],
 })
 export class AppModule {}
@@ -36,9 +37,10 @@ we provide a custom Jalali adaptor in this package:
 Example
 
 import { provideAnimations } from '@angular/platform-browser/animations';
-import { JalaliMomentDateAdapter, NZ_DATE_CONFIG, NzDateAdapter, NzI18nService } from 'ngz-shamsi-datepicker';
+import { NzDatePickerModule, JalaliMomentDateAdapter, NZ_DATE_CONFIG, NzDateAdapter, NzI18nService } from 'ngz-shamsi-datepicker';
 
 @NgModule({
+  imports: [NzDatePickerModule],
   providers: [
     provideAnimations(),
     {provide: NzDateAdapter, useClass: JalaliMomentDateAdapter, deps: [NzI18nService]},
