@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 `$ ng new PROJECT_NAME`
 `$ cd PROJECT_NAME`
-`$ npm i ng-met-antd`
+`$ npm i ngz-shamsi-datepicker`
 
 see full usage guide in [Ng-Zorro-Package](https://ng.ant.design/components/date-picker/en)
 
