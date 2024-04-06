@@ -2,10 +2,56 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
 
-## Code scaffolding
+## Usage
 
-Run `ng generate component component-name --project ngz-shamsi-datepicker` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngz-shamsi-datepicker`.
-> Note: Don't forget to add `--project ngz-shamsi-datepicker` or else it will be added to the default project in your `angular.json` file. 
+`$ ng new PROJECT_NAME`
+`$ cd PROJECT_NAME`
+`$ npm i ng-met-antd`
+
+see full usage guide in [Ng-Zorro-Package](https://ng.ant.design/components/date-picker/en)
+
+## Provide custom DateAdapter Like Jalali
+If you need to present another calendar like Jalali or Hijri, you can provide a custom NzDateAdapter which implements required methods to deal with native date object.
+
+```
+Example
+import { NzDateAdapter } from 'ngz-shamsi-datepicker';
+
+export class CustomDateAdapter extends NzDateAdapter<any> {
+  // implementation of abstract methods
+}
+
+@NgModule({
+  providers: [{ provide: NzDateAdapter, useClass: CustomDateAdapter }],
+})
+export class AppModule {}
+```
+
+we provide a custom Jalali adaptor in this package:
+
+```
+Example
+
+import { provideAnimations } from '@angular/platform-browser/animations';
+import { JalaliMomentDateAdapter, NZ_DATE_CONFIG, NzDateAdapter, NzI18nService } from 'ngz-shamsi-datepicker';
+
+@NgModule({
+  providers: [
+    provideAnimations(),
+    {provide: NzDateAdapter, useClass: JalaliMomentDateAdapter, deps: [NzI18nService]},
+    {provide: NZ_DATE_CONFIG, useValue: {
+      displayFormats: {
+          veryShortWeekLabel: 'dd',
+          dateInput: 'yyyy/MM/DD',
+          dateTimeInput: 'yyyy-MM-DD HH:mm:ss',
+          weekLabel: 'dddd',
+        }
+      }
+    }
+  ],
+})
+export class AppModule {}
+```
 
 ## Build
 
