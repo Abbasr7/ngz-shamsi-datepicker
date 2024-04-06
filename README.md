@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.1.
 
+## Demo
+see [DEMO](https://stackblitz.com/~/github.com/Abbasr7/ngz-shamsi-datepicker)
+
 ## Usage
 
 `$ ng new PROJECT_NAME`
