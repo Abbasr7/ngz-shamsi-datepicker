@@ -19,7 +19,7 @@ import { YearHeaderComponent } from './year-header.component';
 import { YearTableComponent } from './year-table.component';
 
 @NgModule({
-  imports: [
+  declarations: [
     DateHeaderComponent,
     DateTableComponent,
     DecadeHeaderComponent,
@@ -29,6 +29,7 @@ import { YearTableComponent } from './year-table.component';
     YearHeaderComponent,
     YearTableComponent
   ],
+  imports: [],
   exports: [
     DateHeaderComponent,
     DateTableComponent,

@@ -20,8 +20,6 @@ import { DateBodyRow, DateCell } from './interface';
   selector: 'month-table',
   exportAs: 'monthTable',
   templateUrl: 'abstract-table.html',
-  standalone: true,
-  imports: [NgIf, NgForOf, NgClass, NgSwitch, NgSwitchCase, NgTemplateOutlet, NgSwitchDefault]
 })
 export class MonthTableComponent extends AbstractTable implements OnChanges, OnInit {
   override MAX_ROW = 4;

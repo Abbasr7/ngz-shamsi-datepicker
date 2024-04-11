@@ -21,8 +21,6 @@ import { transCompatFormat } from './util';
   selector: 'date-table',
   exportAs: 'dateTable',
   templateUrl: './abstract-table.html',
-  standalone: true,
-  imports: [NgIf, NgForOf, NgClass, NgSwitch, NgSwitchCase, NgTemplateOutlet, NgSwitchDefault]
 })
 export class DateTableComponent extends AbstractTable implements OnChanges, OnInit {
   @Input() override locale!: NzCalendarI18nInterface;

@@ -20,8 +20,6 @@ import { NgClass, NgForOf, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, NgTemp
   selector: 'year-table',
   exportAs: 'yearTable',
   templateUrl: 'abstract-table.html',
-  imports: [NgIf, NgForOf, NgClass, NgSwitch, NgSwitchCase, NgTemplateOutlet, NgSwitchDefault],
-  standalone: true
 })
 export class YearTableComponent extends AbstractTable {
   override MAX_ROW = 4;

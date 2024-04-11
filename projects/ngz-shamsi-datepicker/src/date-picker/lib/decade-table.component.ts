@@ -19,8 +19,6 @@ const MAX_COL = 3;
   selector: 'decade-table',
   exportAs: 'decadeTable',
   templateUrl: 'abstract-table.html',
-  standalone: true,
-  imports: [NgIf, NgForOf, NgClass, NgSwitch, NgSwitchCase, NgTemplateOutlet, NgSwitchDefault]
 })
 export class DecadeTableComponent extends AbstractTable implements OnChanges {
   get startYear(): number {

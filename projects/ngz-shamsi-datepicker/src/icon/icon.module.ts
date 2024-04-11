@@ -9,10 +9,12 @@ import { IconDefinition } from '@ant-design/icons-angular';
 
 import { NzIconDirective } from './icon.directive';
 import { NZ_ICONS, NZ_ICONS_PATCH, NzIconPatchService } from './icon.service';
+import { PlatformModule } from '@angular/cdk/platform';
 
 @NgModule({
-  imports: [NzIconDirective],
-  exports: [NzIconDirective]
+  exports: [NzIconDirective],
+  imports: [PlatformModule],
+  declarations: [NzIconDirective]
 })
 export class NzIconModule {
   static forRoot(icons: IconDefinition[]): ModuleWithProviders<NzIconModule> {

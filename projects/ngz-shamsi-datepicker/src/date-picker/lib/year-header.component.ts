@@ -15,8 +15,6 @@ import { PanelSelector } from './interface';
   selector: 'year-header', // eslint-disable-line @angular-eslint/component-selector
   exportAs: 'yearHeader',
   templateUrl: './abstract-panel-header.html',
-  standalone: true,
-  imports: [NgForOf, NgIf, NgClass]
 })
 export class YearHeaderComponent extends AbstractPanelHeader {
   get startYear(): number {

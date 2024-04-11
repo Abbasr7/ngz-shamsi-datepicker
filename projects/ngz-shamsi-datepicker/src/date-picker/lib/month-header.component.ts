@@ -19,8 +19,6 @@ import { CandyDate, CandyDateFac } from '../../core/time';
   selector: 'month-header', // eslint-disable-line @angular-eslint/component-selector
   exportAs: 'monthHeader',
   templateUrl: './abstract-panel-header.html',
-  standalone: true,
-  imports: [NgForOf, NgIf, NgClass]
 })
 export class MonthHeaderComponent extends AbstractPanelHeader {
   constructor(private dateHelper: DateHelperService,@Inject(CandyDate) candyDate: CandyDateFac) {
