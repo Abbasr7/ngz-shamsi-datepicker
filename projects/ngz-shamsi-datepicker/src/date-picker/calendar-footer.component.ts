@@ -1,9 +1,8 @@
 /**
  * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://github.com/NG-ZORRO/../blob/master/LICENSE
+ * found in the LICENSE file at https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/LICENSE
  */
 
-import { NgIf, NgSwitch, NgSwitchCase, NgTemplateOutlet } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -73,9 +72,7 @@ import { PREFIX_CLASS } from './util';
         </li>
       </ul>
     </div>
-  `,
-  imports: [NgIf, NgSwitch, NgSwitchCase, NgTemplateOutlet],
-  standalone: true
+  `
 })
 export class CalendarFooterComponent implements OnChanges {
   @Input() locale!: NzCalendarI18nInterface;
@@ -102,10 +99,10 @@ export class CalendarFooterComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     const now: Date = new Date();
-    if (changes['disabledDate']) {
+    if (changes.disabledDate) {
       this.isTodayDisabled = !!(this.disabledDate && this.disabledDate(now));
     }
-    if (changes['locale']) {
+    if (changes.locale) {
       // NOTE: Compat for DatePipe formatting rules
       const dateFormat: string = transCompatFormat(this.locale.dateFormat);
       this.todayTitle = this.dateHelper.format(now, dateFormat);

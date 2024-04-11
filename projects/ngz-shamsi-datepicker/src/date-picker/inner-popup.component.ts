@@ -1,9 +1,8 @@
 /**
  * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://github.com/NG-ZORRO/../blob/master/LICENSE
+ * found in the LICENSE file at https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/LICENSE
  */
 
-import { NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -16,7 +15,6 @@ import {
   TemplateRef,
   ViewEncapsulation
 } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 
 import { CandyDate, CandyDateFac } from '../core/time';
 import { FunctionProp } from '../core/types';
@@ -111,12 +109,10 @@ import { PREFIX_CLASS } from './util';
             <date-header
               [(value)]="activeDate"
               [locale]="locale"
-              [showSuperPreBtn]="panelMode === 'week' ? enablePrevNext('prev', 'week') : enablePrevNext('prev', 'date')"
-              [showSuperNextBtn]="
-                panelMode === 'week' ? enablePrevNext('next', 'week') : enablePrevNext('next', 'date')
-              "
-              [showPreBtn]="panelMode === 'week' ? enablePrevNext('prev', 'week') : enablePrevNext('prev', 'date')"
-              [showNextBtn]="panelMode === 'week' ? enablePrevNext('next', 'week') : enablePrevNext('next', 'date')"
+              [showSuperPreBtn]="showWeek ? enablePrevNext('prev', 'week') : enablePrevNext('prev', 'date')"
+              [showSuperNextBtn]="showWeek ? enablePrevNext('next', 'week') : enablePrevNext('next', 'date')"
+              [showPreBtn]="showWeek ? enablePrevNext('prev', 'week') : enablePrevNext('prev', 'date')"
+              [showNextBtn]="showWeek ? enablePrevNext('next', 'week') : enablePrevNext('next', 'date')"
               (panelModeChange)="panelModeChange.emit($event)"
               (valueChange)="headerChange.emit($event)"
             ></date-header>
@@ -130,7 +126,6 @@ import { PREFIX_CLASS } from './util';
                 [cellRender]="dateRender"
                 [selectedValue]="selectedValue"
                 [hoverValue]="hoverValue"
-                [canSelectWeek]="panelMode === 'week'"
                 (valueChange)="onSelectDate($event)"
                 (cellHover)="cellHover.emit($event)"
               ></date-table>
@@ -158,9 +153,7 @@ import { PREFIX_CLASS } from './util';
         <!-- use [opened] to trigger time panel 'initPosition()' -->
       </ng-container>
     </div>
-  `,
-  imports: [NgSwitch, NgSwitchCase, LibPackerModule, NgSwitchDefault, NgIf, FormsModule],
-  standalone: true
+  `
 })
 export class InnerPopupComponent implements OnChanges {
   @Input() activeDate!: CandyDate;
@@ -259,7 +252,7 @@ export class InnerPopupComponent implements OnChanges {
     }
     // New Antd vesion has merged 'date' ant 'time' to one panel,
     // So there is not 'time' panel
-    if (changes['panelMode'] && changes['panelMode'].currentValue === 'time') {
+    if (changes.panelMode && changes.panelMode.currentValue === 'time') {
       this.panelMode = 'date';
     }
   }

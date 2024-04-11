@@ -1,10 +1,9 @@
 /**
  * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://github.com/NG-ZORRO/../blob/master/LICENSE
+ * found in the LICENSE file at https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/LICENSE
  */
 
 import { Direction } from '@angular/cdk/bidi';
-import { NgForOf, NgIf, NgTemplateOutlet } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -37,9 +36,7 @@ import {
 import { FunctionProp } from '../core/types';
 import { NzCalendarI18nInterface } from '../i18n';
 
-import { CalendarFooterComponent } from './calendar-footer.component';
 import { DatePickerService } from './date-picker.service';
-import { InnerPopupComponent } from './inner-popup.component';
 import {
   CompatibleDate,
   DisabledDateFn,
@@ -61,8 +58,8 @@ import { getTimeConfig, isAllowedDate, PREFIX_CLASS } from './util';
   template: `
     <ng-container *ngIf="isRange; else singlePanel">
       <div class="{{ prefixCls }}-range-wrapper {{ prefixCls }}-date-range-wrapper">
-        <div class="{{ prefixCls }}-range-arrow" [style]="arrowPosition"></div>
-        <div class="{{ prefixCls }}-panel-container {{ showWeek ? prefixCls + '-week-number' : '' }}">
+        <div class="{{ prefixCls }}-range-arrow" [style.left.px]="datePickerService?.arrowLeft"></div>
+        <div class="{{ prefixCls }}-panel-container">
           <div class="{{ prefixCls }}-panels">
             <ng-container *ngIf="hasTimePicker; else noTimePicker">
               <ng-container
@@ -146,9 +143,7 @@ import { getTimeConfig, isAllowedDate, PREFIX_CLASS } from './util';
         <span class="ant-tag ant-tag-blue">{{ name }}</span>
       </li>
     </ng-template>
-  `,
-  imports: [InnerPopupComponent, NgTemplateOutlet, NgIf, CalendarFooterComponent, NgForOf],
-  standalone: true
+  `
 })
 export class DateRangePopupComponent implements OnInit, OnChanges, OnDestroy {
   @Input() isRange!: boolean;
@@ -176,7 +171,7 @@ export class DateRangePopupComponent implements OnInit, OnChanges, OnDestroy {
   timeOptions: SupportTimeOptions | SupportTimeOptions[] | null = null;
   hoverValue: SingleValue[] = []; // Range ONLY
   checkedPartArr: boolean[] = [false, false];
-  destroy$ = new Subject<boolean>();
+  destroy$ = new Subject();
 
   get hasTimePicker(): boolean {
     return !!this.showTime;
@@ -184,12 +179,6 @@ export class DateRangePopupComponent implements OnInit, OnChanges, OnDestroy {
 
   get hasFooter(): boolean {
     return this.showToday || this.hasTimePicker || !!this.extraFooter || !!this.ranges;
-  }
-
-  get arrowPosition(): { left?: string; right?: string } {
-    return this.dir === 'rtl'
-      ? { right: `${this.datePickerService?.arrowLeft}px` }
-      : { left: `${this.datePickerService?.arrowLeft}px` };
   }
 
   constructor(
