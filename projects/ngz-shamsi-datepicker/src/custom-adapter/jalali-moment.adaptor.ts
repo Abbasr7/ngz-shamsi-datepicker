@@ -1,4 +1,4 @@
-import moment from 'jalali-moment';
+import * as moment from 'jalali-moment';
 import { Moment } from 'jalali-moment';
 
 import { DateMode, NzDateAdapter } from '../core/time';

@@ -11,6 +11,7 @@ import {
   ConnectedOverlayPositionChange,
   ConnectionPositionPair,
   HorizontalConnectionPos,
+  OverlayModule,
   VerticalConnectionPos
 } from '@angular/cdk/overlay';
 import { Platform } from '@angular/cdk/platform';
@@ -84,6 +85,7 @@ import {
 } from './standard-types';
 import { PREFIX_CLASS } from './util';
 import { slideMotion } from '../core/animation/slide';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const POPUP_STYLE_PATCH = { position: 'relative' }; // Aim to override antd's style to support overlay's position strategy (position:absolute will cause it not working because the overlay can't get the height/width of it's content)
 const NZ_CONFIG_MODULE_NAME: NzConfigKey = 'datePicker';
@@ -268,9 +270,10 @@ export type NzPlacement = 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight';
     NgStyle,
     NzFormPatchModule,
     DateRangePopupComponent,
-    CdkConnectedOverlay,
     NzOverlayModule,
-    NzNoAnimationDirective
+    NzNoAnimationDirective,
+    OverlayModule,
+    BrowserAnimationsModule
   ],
   standalone: true,
   styleUrls: ['./date-picker.component.less']
