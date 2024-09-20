@@ -1,19 +1,13 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-// import { en_US, fa_IR, NzDatePickerModule, NzI18nService, NzTimePickerModule } from '../../projects/ngz-shamsi-datepicker/src/public-api';
-import { NzDatePickerModule, NzI18nService, NzTimePickerModule, en_US, fa_IR } from 'ngz-shamsi-datepicker';
+import { en_US, fa_IR, NzI18nService } from 'projects/ngz-shamsi-datepicker/src/i18n';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet, NzDatePickerModule, FormsModule, ReactiveFormsModule, NzTimePickerModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.less'
+  styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'ngz-datepicker';
+  title = 'ngz-datepicker-14';
   ranges = { "امروز": [new Date(), new Date()], 'این ماه': [new Date(), new Date()] };
   isPersian = false;
 

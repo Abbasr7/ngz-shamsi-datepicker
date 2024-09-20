@@ -1,6 +1,8 @@
 # NgzJalaliDatepicker
+** سازگاری با انگولار نسخه های بالاتر از 14.2.0  **
+This library was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+compatible with angular **'14.2.0 <= * '** versions.(14.2.0 and above)
 
 ## Demo
 see [DEMO](https://stackblitz.com/~/github.com/Abbasr7/ngz-shamsi-datepicker)

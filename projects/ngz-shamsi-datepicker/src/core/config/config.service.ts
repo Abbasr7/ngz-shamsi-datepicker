@@ -1,9 +1,9 @@
 /**
  * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://github.com/NG-ZORRO/../blob/master/LICENSE
+ * found in the LICENSE file at https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/LICENSE
  */
 
-import { CSP_NONCE, Inject, Injectable, Optional } from '@angular/core';
+import { Inject, Injectable, Optional } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { filter, mapTo } from 'rxjs/operators';
 
@@ -27,18 +27,11 @@ export class NzConfigService {
   /** Global config holding property. */
   private readonly config: NzConfig;
 
-  private readonly cspNonce?: string | null;
-
-  constructor(
-    @Optional() @Inject(NZ_CONFIG) defaultConfig?: NzConfig,
-    @Optional() @Inject(CSP_NONCE) cspNonce?: string | null
-  ) {
+  constructor(@Optional() @Inject(NZ_CONFIG) defaultConfig?: NzConfig) {
     this.config = defaultConfig || {};
-    this.cspNonce = cspNonce;
-
     if (this.config.theme) {
       // If theme is set with NZ_CONFIG, register theme to make sure css variables work
-      registerTheme(this.getConfig().prefixCls?.prefixCls || defaultPrefixCls, this.config.theme, cspNonce);
+      registerTheme(this.getConfig().prefixCls?.prefixCls || defaultPrefixCls, this.config.theme, null);
     }
   }
 
@@ -60,7 +53,7 @@ export class NzConfigService {
   set<T extends NzConfigKey>(componentName: T, value: NzConfig[T]): void {
     this.config[componentName] = { ...this.config[componentName], ...value };
     if (componentName === 'theme' && this.config.theme) {
-      registerTheme(this.getConfig().prefixCls?.prefixCls || defaultPrefixCls, this.config.theme, this.cspNonce);
+      registerTheme(this.getConfig().prefixCls?.prefixCls || defaultPrefixCls, this.config.theme, null);
     }
     this.configUpdated$.next(componentName);
   }

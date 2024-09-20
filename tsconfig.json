@@ -2,6 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -9,22 +10,21 @@
     "noPropertyAccessFromIndexSignature": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "esModuleInterop": true,
+    "sourceMap": true,
     "paths": {
       "ngz-shamsi-datepicker": [
-        "./dist/ngz-shamsi-datepicker"
+        "dist/ngz-shamsi-datepicker"
       ]
     },
-    "sourceMap": true,
     "declaration": false,
+    "downlevelIteration": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "ES2022",
-    "module": "ES2022",
-    "useDefineForClassFields": false,
+    "target": "es2020",
+    "module": "es2020",
     "lib": [
-      "ES2022",
+      "es2020",
       "dom"
     ]
   },
@@ -32,6 +32,7 @@
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "skipLibCheck": true
   }
 }
