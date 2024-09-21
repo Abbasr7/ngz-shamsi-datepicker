@@ -9,3 +9,4 @@ export * from './core/time/public-api';
 export * from './i18n/public-api';
 export * from './core/types/public-api';
 export * from './custom-adapter/jalali-moment.adaptor';
+export * from './time-picker/public-api';
