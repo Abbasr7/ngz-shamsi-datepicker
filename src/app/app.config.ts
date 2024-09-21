@@ -14,7 +14,7 @@ import { registerLocaleData } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes),
-    // provideAnimations(),
+    provideAnimations(),
     {provide: NzDateAdapter, useClass: JalaliMomentDateAdapter, deps: [NzI18nService]},
     {provide: NZ_DATE_CONFIG, useValue: {
       displayFormats: {

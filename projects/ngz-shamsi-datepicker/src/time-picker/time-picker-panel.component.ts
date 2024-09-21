@@ -94,7 +94,13 @@ export type NzTimePickerUnit = 'hour' | 'minute' | 'second' | '12-hour';
             class="ant-picker-time-panel-cell"
             [class.ant-picker-time-panel-cell-selected]="isSelected12Hours(range)"
           >
-            <div class="ant-picker-time-panel-cell-inner">{{ range.value }}</div>
+            <div class="ant-picker-time-panel-cell-inner">
+              {{ 
+                ('Calendar.lang.'+range.value | nzI18n) != 'Calendar.lang.'+range.value?
+                ('Calendar.lang.'+range.value | nzI18n) :
+                 range.value
+              }}
+              </div>
           </li>
         </ng-container>
       </ul>
@@ -152,6 +158,7 @@ export class NzTimePickerPanelComponent implements ControlValueAccessor, OnInit,
   minuteRange!: ReadonlyArray<{ index: number; disabled: boolean }>;
   secondRange!: ReadonlyArray<{ index: number; disabled: boolean }>;
   use12HoursRange!: ReadonlyArray<{ index: number; value: string }>;
+  rtl: boolean = false;
 
   @ViewChild('hourListElement', { static: false })
   hourListElement?: DebugElement;

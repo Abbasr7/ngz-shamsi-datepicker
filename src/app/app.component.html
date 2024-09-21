@@ -18,6 +18,29 @@
   <br />
     <nz-range-picker [nzRanges]="ranges" ngModel (ngModelChange)="onChange($event)"></nz-range-picker>
 
+  <br>
+  <br>
+
+    <nz-time-picker [(ngModel)]="time" [nzDefaultOpenValue]="defaultOpenValue"></nz-time-picker>
+
+    <br>
+    <br>
+    <nz-date-picker
+      nzShowTime
+      nzFormat="yyyy-MM-dd HH:mm:ss"
+      ngModel
+      (ngModelChange)="onChange($event)"
+      (nzOnOk)="onOk($event)"
+    ></nz-date-picker>
+
+    <br>
+    <br>
+    <nz-time-picker
+      [(ngModel)]="time"
+      [nzUse12Hours]="true"
+      (ngModelChange)="onChange($event)"
+      nzFormat="h:mm a"
+    ></nz-time-picker>
   </div>
 </main>
 
