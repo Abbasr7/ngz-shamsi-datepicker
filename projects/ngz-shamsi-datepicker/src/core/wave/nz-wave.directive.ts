@@ -39,7 +39,7 @@ export function provideNzWave(config: NzWaveConfig): EnvironmentProviders {
 }
 
 @Directive({
-  selector: '[nz-wave],button[nz-button]:not([nzType="link"]):not([nzType="text"])',
+  selector: '[nz-wave],button[nz-button]:not([nzType="link"]):not([nzType="text"]),.ngz-button',
   exportAs: 'nzWave',
   standalone: true
 })

@@ -26,6 +26,7 @@ import { NzCalendarI18nInterface } from '../i18n';
 import { LibPackerModule } from './lib';
 import { DisabledDateFn, NzDateMode, RangePartType, SupportTimeOptions } from './standard-types';
 import { PREFIX_CLASS } from './util';
+import { NzTimePickerModule } from '../time-picker';
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
@@ -139,7 +140,7 @@ import { PREFIX_CLASS } from './util';
         </ng-container>
       </div>
       <ng-container *ngIf="showTimePicker && timeOptions">
-        <!-- <nz-time-picker-panel
+        <nz-time-picker-panel
           [nzInDatePicker]="true"
           [ngModel]="value?.nativeDate"
           (ngModelChange)="onSelectTime($event)"
@@ -154,12 +155,12 @@ import { PREFIX_CLASS } from './util';
           [nzDefaultOpenValue]="$any(timeOptions.nzDefaultOpenValue)"
           [nzUse12Hours]="!!timeOptions.nzUse12Hours"
           [nzAddOn]="$any(timeOptions.nzAddOn)"
-        ></nz-time-picker-panel> -->
+        ></nz-time-picker-panel>
         <!-- use [opened] to trigger time panel 'initPosition()' -->
       </ng-container>
     </div>
   `,
-  imports: [NgSwitch, NgSwitchCase, LibPackerModule, NgSwitchDefault, NgIf, FormsModule],
+  imports: [NgSwitch, NgSwitchCase, LibPackerModule, NzTimePickerModule, NgSwitchDefault, NgIf, FormsModule],
   standalone: true
 })
 export class InnerPopupComponent implements OnChanges {
