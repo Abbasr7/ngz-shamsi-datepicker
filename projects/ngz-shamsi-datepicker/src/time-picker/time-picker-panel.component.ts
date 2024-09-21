@@ -100,7 +100,7 @@ export type NzTimePickerUnit = 'hour' | 'minute' | 'second' | '12-hour';
                 ('Calendar.lang.'+range.value | nzI18n) :
                  range.value
               }}
-              </div>
+            </div>
           </li>
         </ng-container>
       </ul>
