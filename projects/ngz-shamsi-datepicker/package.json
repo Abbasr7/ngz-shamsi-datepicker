@@ -1,6 +1,6 @@
 {
   "name": "ngz-shamsi-datepicker",
-  "version": "1.14.0",
+  "version": "1.14.1",
   "license": "MIT",
   "description": "A Date picker UI component that support jalali-shmasi date based on Ant Design and Angular",
   "keywords": [
@@ -16,13 +16,23 @@
     "url": "https://github.com/Abbasr7/ngz-shamsi-datepicker"
   },
   "peerDependencies": {
-    "@angular/common": ">=14.2.0",
-    "@angular/core": ">=14.2.0",
-    "@angular/animations": ">=14.2.0",
-    "@angular/forms": ">=14.2.0",
-    "@angular/platform-browser": ">=14.2.0",
-    "@angular/router": ">=14.2.0",
-    "@angular/cdk": ">=14.2.0"
+    "@angular/core": ">=14.0.0",
+    "@angular/common": ">=14.0.0",
+    "@angular/forms": ">=14.0.0",
+    "@angular/router": ">=14.0.0",
+    "@angular/animations": ">=14.0.0",
+    "@angular/cdk": ">=14.0.0"
+  },
+  "optionalDependencies": {
+    "@angular/core": ">=14.0.0",
+    "@angular/common": ">=14.0.0",
+    "@angular/forms": ">=14.0.0",
+    "@angular/router": ">=14.0.0",
+    "@angular/animations": ">=14.0.0",
+    "@angular/cdk": ">=14.0.0"
+  },
+  "scripts": {
+    "postinstall": "node install-deps.js"
   },
   "dependencies": {
     "tslib": "^2.3.0",

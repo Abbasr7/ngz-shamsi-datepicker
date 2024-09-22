@@ -22,6 +22,7 @@
     "@ant-design/icons-angular": "^14.1.0",
     "date-fns": "^4.1.0",
     "jalali-moment": "^3.3.11",
+    "ngz-shamsi-datepicker": "^1.14.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
