@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { JalaliMomentDateAdapter, NZ_DATE_CONFIG, NzDateAdapter, NzDatePickerModule, NzI18nService } from 'projects/ngz-shamsi-datepicker/src/public-api';
+import { JalaliMomentDateAdapter, NZ_DATE_CONFIG, NzDateAdapter, NzDatePickerModule, NzI18nService, NzTimePickerModule } from 'projects/ngz-shamsi-datepicker/src/public-api';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,8 @@ import { JalaliMomentDateAdapter, NZ_DATE_CONFIG, NzDateAdapter, NzDatePickerMod
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    NzDatePickerModule, FormsModule, ReactiveFormsModule
+    NzDatePickerModule, FormsModule, ReactiveFormsModule,
+    NzTimePickerModule
   ],
   providers: [
     // provideAnimations(),
