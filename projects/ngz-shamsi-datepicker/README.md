@@ -1,8 +1,12 @@
 # NgzJalaliDatepicker
-** سازگاری با انگولار نسخه های بالاتر از 14.2.0  **
+[![npm downloads](https://img.shields.io/badge/npm-v1.14.0-orange)](https://www.npmjs.com/package/ngz-shamsi-datepicker)
+
+**'سازگاری با انگولار نسخه 14.2.0 و نسخه های بالاتر '**
+**' اضافه شدن انتخابگر زمان(time picker) '**
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
 compatible with angular **'14.2.0 <= * '** versions.(14.2.0 and above)
+added **'time picker'**
 
 ## Demo
 see [DEMO](https://stackblitz.com/~/github.com/Abbasr7/ngz-shamsi-datepicker)
